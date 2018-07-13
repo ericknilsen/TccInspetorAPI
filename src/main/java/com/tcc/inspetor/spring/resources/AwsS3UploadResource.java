@@ -4,6 +4,7 @@ import java.io.InputStream;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
+import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
@@ -34,6 +35,11 @@ public class AwsS3UploadResource {
 			
 		return this.uploadService.uploadToS3(in, fileDetail.getFileName());	
 
-	}	
+	}
+	
+	@GET
+	public String test() {
+		return "Hello";
+	}
 
 }

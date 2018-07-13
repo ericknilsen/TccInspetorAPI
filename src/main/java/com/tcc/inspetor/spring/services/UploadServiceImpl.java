@@ -5,7 +5,6 @@ import java.io.InputStream;
 import org.springframework.stereotype.Component;
 
 import com.amazonaws.AmazonServiceException;
-import com.amazonaws.ClientConfiguration;
 import com.amazonaws.SdkClientException;
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
@@ -20,16 +19,10 @@ public class UploadServiceImpl implements UploadService {
 		String clientRegion = System.getenv("AWS_REGION");
         String bucketName = System.getenv("AWS_BUCKET_NAME"); 
         String fileObjKeyName = fileName;
-        
-        
-        ClientConfiguration cc = new ClientConfiguration();
-        cc.setProxyHost("localhost");
-        cc.setProxyPort(5865);
 
         try {
         	BasicAWSCredentials awsCreds = new BasicAWSCredentials(System.getenv("AWS_ACCESS_KEY_ID"), System.getenv("AWS_SECRET_ACCESS_KEY"));
-            AmazonS3 s3Client = AmazonS3ClientBuilder.standard()
-            		.withClientConfiguration(cc)            		
+            AmazonS3 s3Client = AmazonS3ClientBuilder.standard()            		    		
                     .withRegion(clientRegion)
                     .withCredentials(new AWSStaticCredentialsProvider(awsCreds))
                     .build();

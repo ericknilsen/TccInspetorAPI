@@ -8,8 +8,6 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		//Altera a porta do servidor Web 
-		System.setProperty("server.port", "8082");
 		SpringApplication.run(Main.class, args);
 
 	}

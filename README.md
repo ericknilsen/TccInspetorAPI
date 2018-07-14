@@ -1,8 +1,14 @@
 # TccInspetorAPI
 
-- É uma API em Java que disponibiliza um método para fazer upload de objetos em um Bucket da Amazon S3.
-- Feita em Spring Boot, Jersey e Maven.
-- Implantada no Heroku.
+- É uma API em Java que disponibiliza um método para fazer upload de objetos em um Bucket da Amazon S3. Corresponde ao componente de upload de arquivos da arquitetura abaixo:
+
+![](https://github.com/ericknilsen/TccInspetor/blob/master/docs/Arquitetura_ABNT.png)
+
+
+- Utiliza as tecnologias Spring Boot, Jersey e Maven.
+- Está implantada no Heroku.
+
+
 
 ## Configuração
 

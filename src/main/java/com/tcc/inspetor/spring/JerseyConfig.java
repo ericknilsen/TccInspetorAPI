@@ -13,6 +13,7 @@ public class JerseyConfig extends ResourceConfig {
 	public JerseyConfig() {		
 		register(AwsS3UploadResource.class);
 		register(MultiPartFeature.class);
+		register(CORSResponseFilter.class);
 	}
 	
 	

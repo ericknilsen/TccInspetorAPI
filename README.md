@@ -39,7 +39,7 @@ $ git clone https://github.com/ericknilsen/TccInspetorAPI
 - Aponte para o diretório do projeto TccInspetorAPI.
 - Execute a classe _Main.java_ como Java Application.
 - Modifique a forma de acesso às variáveis do S3 na classe _UploadServiceImpl.java_. O código faz referência aos valores configurados no  Heroku. Ex: _System.getenv("AWS_ACCESS_KEY_ID")_.
-- Use o Postman para testar o envio de um arquivo para a url http://localhost:8080/upload.
+- Use o Postman para testar o envio de um arquivo para a URL http://localhost:8080/upload.
 
 
 

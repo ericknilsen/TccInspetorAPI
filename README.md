@@ -14,12 +14,9 @@ A implantação no Heroku é feita da seguinte forma:
 
 Como a API deve fazer um deploy em um bucket S3 privado, devem ser disponibilizadas as credencias de acesso para o código da API. Por motivo de segurança, os valores das credenciais devem ser configurados no Heroku.
 
-Na aba _Settings_ inclua os pares _KEY_ e _VALUE_ em _Config Vars_ conforme valores abaixo:
-- _AWS_ACCESS_KEY_ID_
-- _AWS_BUCKET_NAME_
-- _AWS_REGION_
-- _AWS_SECRET_ACCESS_KEY_
-
+- Na aba _Settings_ inclua os pares _KEY_ e _VALUE_ em _Config Vars_.
+- As entradas de _KEY_ devem ser: _AWS_ACCESS_KEY_ID_, _AWS_BUCKET_NAME_, _AWS_REGION_, _AWS_SECRET_ACCESS_KEY_
+- Os entradas de _VALUE_ devem corresponder aos valores definidos na conta da AWS.
 
 
 

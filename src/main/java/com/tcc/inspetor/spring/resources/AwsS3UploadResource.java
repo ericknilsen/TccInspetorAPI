@@ -14,6 +14,7 @@ import org.glassfish.jersey.media.multipart.FormDataParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.tcc.inspetor.spring.model.Response;
 import com.tcc.inspetor.spring.services.UploadService;
 
 @Component
@@ -28,7 +29,7 @@ public class AwsS3UploadResource {
 	@POST
 	@Consumes(MediaType.MULTIPART_FORM_DATA)
 	@Produces("text/plain")
-	public String handleUpload(@FormDataParam("file") InputStream in,
+	public Response handleUpload(@FormDataParam("file") InputStream in,
 			@FormDataParam("file") FormDataContentDisposition fileDetail)
 			throws Exception {
 
@@ -38,8 +39,12 @@ public class AwsS3UploadResource {
 	}
 	
 	@GET
-	public String test() {
-		return "Hello";
+	@Produces("application/json")
+	public Response test() {
+		
+		Response r = new Response("file name");
+		
+		return r;
 	}
 
 }

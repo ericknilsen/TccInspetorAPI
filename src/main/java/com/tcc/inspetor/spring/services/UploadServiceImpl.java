@@ -10,12 +10,13 @@ import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
+import com.tcc.inspetor.spring.model.Response;
 
 @Component
 public class UploadServiceImpl implements UploadService {
 
 	@Override
-	public String uploadToS3(InputStream inputStream, String fileName) {
+	public Response uploadToS3(InputStream inputStream, String fileName) {
 		String clientRegion = System.getenv("AWS_REGION");
         String bucketName = System.getenv("AWS_BUCKET_NAME"); 
         String fileObjKeyName = fileName;
@@ -29,14 +30,14 @@ public class UploadServiceImpl implements UploadService {
                                  
             s3Client.putObject(bucketName, fileObjKeyName, inputStream, null);
             
-            return "File Uploaded!";
+            return new Response(fileObjKeyName);
         
         }
         catch(AmazonServiceException e) {   
-        	return e.getErrorMessage();            
+        	return new Response(e.getErrorMessage());            
         }
         catch(SdkClientException e) {
-        	return e.getMessage();
+        	return new Response(e.getMessage());
         }        
 
 	}

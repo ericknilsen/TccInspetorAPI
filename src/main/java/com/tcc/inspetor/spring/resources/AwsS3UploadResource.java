@@ -28,7 +28,7 @@ public class AwsS3UploadResource {
 
 	@POST
 	@Consumes(MediaType.MULTIPART_FORM_DATA)
-	@Produces("text/plain")
+	@Produces("application/json")
 	public Response handleUpload(@FormDataParam("file") InputStream in,
 			@FormDataParam("file") FormDataContentDisposition fileDetail)
 			throws Exception {

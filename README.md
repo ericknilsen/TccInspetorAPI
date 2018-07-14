@@ -24,7 +24,7 @@ Como a API deve fazer o upload de arquivos em um bucket S3 privado, devem ser di
 
 - Na aba _Settings_ inclua os pares _KEY_ e _VALUE_ em _Config Vars_.
 - As entradas de _KEY_ devem ser: _AWS_ACCESS_KEY_ID_, _AWS_BUCKET_NAME_, _AWS_REGION_ e _AWS_SECRET_ACCESS_KEY_.
-- Os entradas de _VALUE_ devem corresponder aos valores definidos na conta da AWS.
+- As entradas de _VALUE_ devem corresponder aos valores definidos na conta da AWS.
 
 
 ### Desenvolvimento
@@ -39,7 +39,7 @@ $ git clone https://github.com/ericknilsen/TccInspetorAPI
 - Aponte para o diretório do projeto TccInspetorAPI.
 - Execute a classe _Main.java_ como Java Application.
 - Modifique a forma de acesso às variáveis do S3 na classe _UploadServiceImpl.java_. O código faz referência aos valores configurados no  Heroku. Ex: _System.getenv("AWS_ACCESS_KEY_ID")_.
-- Use o Postman para testar o envio de um arquivo para a URL http://localhost:8080/upload.
+- Use o Postman para testar o envio de um arquivo para a URL http://localhost:8080/upload
 
 
 

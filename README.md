@@ -2,7 +2,7 @@
 
 - É uma API em Java que disponibiliza um método para fazer upload de objetos em um Bucket da Amazon S3. Corresponde ao componente TccInspetorAPI da arquitetura abaixo:
 
-![](https://github.com/ericknilsen/TccInspetorCore/blob/master/docs/Arquitetura_ABNT.png)
+![](https://github.com/ericknilsen/TccInspetorCore/blob/master/docs/Arquitetura_TccInspetor.png)
 
 
 - Utiliza as tecnologias Spring Boot, Jersey e Maven.

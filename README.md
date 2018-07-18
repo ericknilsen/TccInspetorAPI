@@ -1,6 +1,6 @@
 # TccInspetorAPI
 
-- It's a Java API that provides a method for uploading objects to an Amazon S3 Bucket. Corresponds to the **TccInspetorAPI** component of the following architecture: 
+- It's a Java API that provides a method for uploading objects to an Amazon S3 Bucket. It corresponds to the **TccInspetorAPI** component of the following architecture: 
 
 ![](https://github.com/ericknilsen/TccInspetorCore/blob/master/docs/Arquitetura_TccInspetor.png)
 
